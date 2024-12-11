@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <main className="h-auto w-screen bg-gradient-to-br from-purple-50 to-white dark:from-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
+      {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold">
@@ -38,26 +38,22 @@ export default function Hero() {
               <Image
                 src={heroImage}
                 alt="Hero Image"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 className="rounded-lg"
               />
             </div>
-            <div className="absolute top-10 left-80 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg">
+            <div className="absolute top-4 left-60 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
               <div className="flex items-start gap-3">
-               
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Alakh Sir, What is PW?</p>
-                  
-                
+                <p className="text-sm text-gray-600 dark:text-gray-300">Gaurav Sir, What is UIDMT?</p>
               </div>
             </div>
             <div className="absolute bottom-0 right-4 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg">
               <div className="flex items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900" />
                 <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Alakh Sir, What is PW?</p>
                   <p className="mt-2 text-sm font-medium text-purple-600 dark:text-purple-400">
-                    PW is India's leading Edtech Company that is democratizing education at Scale.
+                    UIDMT is India's leading Edtech Company that is democratizing education at Scale.
                   </p>
                 </div>
               </div>
@@ -66,7 +62,7 @@ export default function Hero() {
         </div>
 
         {/* Features Section */}
-        <div className="mt-24 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Card className="p-6 text-center hover:shadow-lg transition-shadow">
             <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900 mb-4">
               <Video className="w-6 h-6 text-red-600 dark:text-red-400" />

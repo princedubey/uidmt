@@ -16,11 +16,11 @@ export default function Navbar() {
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   return (
-    <nav className="border-b bg-gradient-to-r from-purple-600 to-blue-500">
+    <nav className="border-b bg-gradient-to-r from-purple-600 to-blue-900">
       <div className="flex h-16 items-center px-4 max-w-7xl mx-auto justify-between">
         {/* Logo Section */}
         <Link href="/" className="flex items-center font-semibold">
-          <Image src={logo} alt="Logo" width={120} height={100} />
+          <Image src={logo} alt="Logo" width={140} height={125} />
         </Link>
 
         {/* Hamburger Icon for Mobile */}
@@ -56,7 +56,7 @@ export default function Navbar() {
 
       {/* Sidebar (Mobile) */}
       <div
-        className={`lg:hidden fixed top-0 left-0 w-2/3 h-full bg-white dark:bg-gray-800 shadow-md transform transition-all duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`z-50 lg:hidden fixed top-0 left-0 w-2/3 h-full bg-white dark:bg-gray-800 shadow-md transform transition-all duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleSidebar} className="text-xl">
