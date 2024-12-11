@@ -1,4 +1,6 @@
 "use client";
+import Hero from "@/components/hero";
+// import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Users, Star } from "lucide-react";
 import Link from "next/link";
@@ -14,8 +16,10 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center">
+ 
+        <Hero />
+       
+        {/* <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
             Transform Your Learning Journey
           </h1>
@@ -33,7 +37,7 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-        </div>
+        </div> */}
 
         {/* Why Choose Us Section */}
         <div ref={ref} className="mt-24 text-center">
