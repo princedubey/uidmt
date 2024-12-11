@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { BookOpen } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useState } from "react";
+import Image from "next/image";
+import logo from "../app/assets/light-logo.png";
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -18,8 +20,7 @@ export default function Navbar() {
       <div className="flex h-16 items-center px-4 max-w-7xl mx-auto justify-between">
         {/* Logo Section */}
         <Link href="/" className="flex items-center font-semibold">
-          <BookOpen className="h-6 w-6 mr-2" />
-          <span>LMS Platform</span>
+          <Image src={logo} alt="Logo" width={120} height={100} />
         </Link>
 
         {/* Hamburger Icon for Mobile */}

@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <Hero />
-      <div className="w-full mx-auto ">
+      <div className="max-w-7xl mx-auto ">
         {/* Why Choose Us Section */}
         <div ref={ref} className="mt-24 text-center">
           <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
