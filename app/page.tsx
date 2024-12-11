@@ -15,30 +15,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
- 
-        <Hero />
-       
-        {/* <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
-            Transform Your Learning Journey
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Access high-quality courses, expert instructors, and a supportive
-            learning community. Start your educational journey today.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link href="/courses">
-              <Button size="lg">Browse Courses</Button>
-            </Link>
-            <Link href="/auth/register">
-              <Button size="lg" variant="outline">
-                Get Started
-              </Button>
-            </Link>
-          </div>
-        </div> */}
-
+      <Hero />
+      <div className="w-full mx-auto ">
         {/* Why Choose Us Section */}
         <div ref={ref} className="mt-24 text-center">
           <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
@@ -165,7 +143,7 @@ export default function Home() {
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="mt-24 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-12 px-6 rounded-lg text-center">
+        <div className="mt-24 bg-gradient-to-r dark:from-gray-900 py-12 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg mb-6">
             Join thousands of students achieving their goals with our platform.
@@ -176,6 +154,7 @@ export default function Home() {
             </Button>
           </Link>
         </div>
+
       </div>
     </div>
   );

@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BookOpen, Video, Brain, Award } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import heroImage from "../app/assets/Untitled_design-removebg-preview.webp"
 
 export default function Hero() {
   const { theme } = useTheme();
 
   return (
-    <main className="h-auto bg-gradient-to-br from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <main className="h-auto bg-gradient-to-br from-purple-50 to-white dark:from-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">

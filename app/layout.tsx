@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { Toaster } from '@/components/ui/toaster';
+import Footer from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Navbar />
           <main className="min-h-screen bg-background">{children}</main>
           <Toaster />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
