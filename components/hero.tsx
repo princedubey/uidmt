@@ -5,13 +5,13 @@ import { Card } from "@/components/ui/card";
 import { BookOpen, Video, Brain, Award } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import heroImage from "../app/assets/Untitled_design-removebg-preview.webp"
+import heroImage from "../app/assets/Untitled_design-removebg-preview.webp";
 
 export default function Hero() {
   const { theme } = useTheme();
 
   return (
-    <main className="h-auto bg-gradient-to-br from-purple-50 to-white dark:from-gray-900">
+    <main className="h-auto w-screen bg-gradient-to-br from-purple-50 to-white dark:from-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -34,7 +34,24 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="absolute -top-4 right-20 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg">
+            <div>
+              <Image
+                src={heroImage}
+                alt="Hero Image"
+                width={500}
+                height={500}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="absolute top-10 left-80 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg">
+              <div className="flex items-start gap-3">
+               
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Alakh Sir, What is PW?</p>
+                  
+                
+              </div>
+            </div>
+            <div className="absolute bottom-0 right-4 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg">
               <div className="flex items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900" />
                 <div>
