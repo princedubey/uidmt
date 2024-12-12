@@ -1,4 +1,4 @@
-import { Course } from "@/types/course";
+import { Course, EnrolledCourse } from "@/types/course";
 
 export const courses: Course[] = [
   {
@@ -34,4 +34,29 @@ export const courses: Course[] = [
     category: "Digital Marketing",
     topics: ["Platform Strategy", "Content Creation", "Analytics", "Paid Advertising", "Community Management"]
   }
+];
+
+
+export const enrolledCourses: EnrolledCourse[] = [
+  {
+    id: 1,
+    title: "Web Development Basics",
+    progress: 65,
+    nextLesson: "CSS Layouts",
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
+  },
+  {
+    id: 2,
+    title: "Web Development",
+    progress: 50,
+    nextLesson: "CSS Layouts",
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
+  },
+  {
+    id: 3,
+    title: "Advanced React Patterns",
+    progress: 30,
+    nextLesson: "Custom Hooks",
+    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop",
+  },
 ];

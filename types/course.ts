@@ -16,3 +16,12 @@ export interface CourseCardProps {
   image: string;
   price: string;
 }
+
+
+export interface EnrolledCourse {
+  id: number;
+  title: string;
+  progress: number; // Represents the progress percentage
+  nextLesson: string;
+  thumbnail: string; // URL to the course thumbnail image
+}

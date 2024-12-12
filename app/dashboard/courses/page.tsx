@@ -1,41 +1,9 @@
-"use client";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { enrolledCourses } from "@/lib/courses";
 
-interface EnrolledCourse {
-  id: number;
-  title: string;
-  progress: number; // Represents the progress percentage
-  nextLesson: string;
-  thumbnail: string; // URL to the course thumbnail image
-}
 
-const enrolledCourses: EnrolledCourse[] = [
-  {
-    id: 1,
-    title: "Web Development Basics",
-    progress: 65,
-    nextLesson: "CSS Layouts",
-    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Web Development",
-    progress: 50,
-    nextLesson: "CSS Layouts",
-    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Advanced React Patterns",
-    progress: 30,
-    nextLesson: "Custom Hooks",
-    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop",
-  },
-];
-
-export default function StudentCourses() {
+export default function page() {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-8">My Courses</h1>
@@ -57,7 +25,6 @@ export default function StudentCourses() {
                     <span>Progress</span>
                     <span>{course.progress}%</span>
                   </div>
-                  <Progress value={course.progress} />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">
