@@ -14,7 +14,7 @@ export default function Home() {
   });
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center box-border overflow-x-hidden">
       <Hero />
       <div className="max-w-7xl mx-auto ">
         {/* Why Choose Us Section */}
@@ -92,30 +92,37 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Featured Courses Section */}
-        <div className="mt-24">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Featured Courses
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array(3)
-              .fill(null)
-              .map((_, i) => (
-                <div key={i} className="bg-card p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-semibold mb-4">
-                    Course Title {i + 1}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    A brief description of the course content and what students
-                    will learn.
-                  </p>
-                  <Link href="/courses/details">
-                    <Button size="sm">Learn More</Button>
-                  </Link>
-                </div>
-              ))}
+       {/* Featured Courses Section */}
+<div className="mt-24">
+  <h2 className="text-3xl font-bold text-center mb-8">
+    Featured Courses
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {Array(3)
+      .fill(null)
+      .map((_, i) => (
+        <div
+          key={i}
+          className="relative bg-card p-1 rounded-lg"
+        >
+          <div className="border border-gray-300  p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold mb-4">
+              Course Title {i + 1}
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              A brief description of the course content and what students
+              will learn.
+            </p>
+            <Link href="/courses/details">
+              <Button size="sm">Learn More</Button>
+            </Link>
           </div>
+          <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600"></div>
         </div>
+      ))}
+  </div>
+</div>
+
 
         {/* Testimonials Section */}
         <div className="mt-24 text-center">
@@ -124,10 +131,10 @@ export default function Home() {
             {Array(3)
               .fill(null)
               .map((_, i) => (
-                <div key={i} className="bg-card p-6 rounded-lg shadow-sm">
+                <div key={i} className=" bg-card border border-gray-300  p-6 rounded-lg shadow-sm">
                   <p className="text-muted-foreground mb-4">
-                    "This platform has completely changed how I approach
-                    learning. The instructors are amazing!"
+                    &quot;This platform has completely changed how I approach
+                    learning. The instructors are amazing!&quot;
                   </p>
                   <div className="flex items-center justify-center">
                     <Star className="text-yellow-500 h-5 w-5" />
