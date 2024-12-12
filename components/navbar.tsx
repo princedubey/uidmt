@@ -47,7 +47,7 @@ export default function Navbar() {
           <Link href="/blog">
             <Button variant="ghost">Blogs</Button>
           </Link>
-          <Link href="/auth/login">
+          <Link href="/login">
             <Button>Login</Button>
           </Link>
           <ModeToggle />

@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold">
-              Bharat's{" "}
+              Bharat&apos;s{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
                 Biggest & Most Trusted
               </span>
@@ -25,7 +25,7 @@ export default function Hero() {
               Educational Platform
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              Unlock your potential by signing up with Physics Wallah-
+              Unlock your potential by signing up with UIDMT-
               The most affordable learning solution
             </p>
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
@@ -53,7 +53,7 @@ export default function Hero() {
                 <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900" />
                 <div>
                   <p className="mt-2 text-sm font-medium text-purple-600 dark:text-purple-400">
-                    UIDMT is India's leading Edtech Company that is democratizing education at Scale.
+                    UIDMT is India&apos;s leading Edtech Company that is democratizing education at Scale.
                   </p>
                 </div>
               </div>

@@ -1,23 +1,27 @@
-import { withAuth } from 'next-auth/middleware';
+import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
-export default withAuth({
-  callbacks: {
-    authorized({ req, token }) {
-      const path = req.nextUrl.pathname;
-      
-      if (path.startsWith('/admin')) {
-        return token?.role === 'admin';
-      }
-      
-      if (path.startsWith('/dashboard')) {
-        return !!token;
-      }
-      
-      return true;
-    },
-  },
-});
+const middleware = (req: NextRequest) => {
+  const accessToken = req.cookies.get("access_token");
+
+
+  const {pathname} = req.nextUrl;
+
+  const previousPage = req.headers.get('referer');
+
+  if(pathname.includes('/login') && accessToken){
+    return NextResponse.redirect(new URL('/dashboard',req.url));
+  }
+  if (pathname.includes('/dashboard') && !accessToken && !previousPage?.includes('/login')) {
+    return NextResponse.redirect(new URL('/login', req.url));
+  }
+
+  // console.log(pathname);
+  return NextResponse.next();;
+};
+
+export default middleware;
 
 export const config = {
-  matcher: ['/admin/:path*', '/dashboard/:path*'],
+  matcher: ['/','/dashboard/:path*','/login','/admin/:path*'],
 };
