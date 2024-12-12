@@ -11,7 +11,7 @@ export default function Hero() {
   const { theme } = useTheme();
 
   return (
-    <main className="h-auto w-screen bg-gradient-to-br from-purple-50 to-white dark:from-gray-900">
+    <main className="h-auto w-screen bg-gradient-to-br dark:from-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">

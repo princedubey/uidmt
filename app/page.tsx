@@ -1,7 +1,9 @@
 "use client";
+import { CourseCard } from "@/components/courses/course-card";
 import Hero from "@/components/hero";
 // import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
+import { courses } from "@/lib/courses";
 import { GraduationCap, BookOpen, Users, Star } from "lucide-react";
 import Link from "next/link";
 import CountUp from "react-countup";
@@ -16,10 +18,10 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center box-border overflow-x-hidden">
       <Hero />
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl mx-auto bg-gradient-to-br dark:from-gray-900">
         {/* Why Choose Us Section */}
         <div ref={ref} className="mt-24 text-center">
-          <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+          <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="text-5xl font-bold text-primary">
@@ -68,70 +70,63 @@ export default function Home() {
         </div>
 
         {/* Features Section */}
-        <div className="mt-24 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-sm">
-            <GraduationCap className="h-12 w-12 mb-4 text-primary" />
-            <h3 className="text-xl font-semibold mb-2">Expert Instructors</h3>
-            <p className="text-center text-muted-foreground">
-              Learn from industry professionals and experienced educators.
-            </p>
-          </div>
-          <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-sm">
-            <BookOpen className="h-12 w-12 mb-4 text-primary" />
-            <h3 className="text-xl font-semibold mb-2">Quality Content</h3>
-            <p className="text-center text-muted-foreground">
-              Access carefully curated courses designed for effective learning.
-            </p>
-          </div>
-          <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-sm">
-            <Users className="h-12 w-12 mb-4 text-primary" />
-            <h3 className="text-xl font-semibold mb-2">Community Support</h3>
-            <p className="text-center text-muted-foreground">
-              Join a community of learners and grow together.
-            </p>
+        <div className="mt-24 text-center">
+          <h2 className="text-3xl font-bold mb-6">What We Serve</h2>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="flex flex-col items-center p-6  rounded-lg shadow-sm">
+              <GraduationCap className="h-12 w-12 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">Expert Instructors</h3>
+              <p className="text-center text-muted-foreground">
+                Learn from industry professionals and experienced educators.
+              </p>
+            </div>
+            <div className="flex flex-col items-center p-6  rounded-lg shadow-sm">
+              <BookOpen className="h-12 w-12 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">Quality Content</h3>
+              <p className="text-center text-muted-foreground">
+                Access carefully curated courses designed for effective
+                learning.
+              </p>
+            </div>
+            <div className="flex flex-col items-center p-6  rounded-lg shadow-sm">
+              <Users className="h-12 w-12 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">Community Support</h3>
+              <p className="text-center text-muted-foreground">
+                Join a community of learners and grow together.
+              </p>
+            </div>
           </div>
         </div>
 
-       {/* Featured Courses Section */}
-<div className="mt-24">
-  <h2 className="text-3xl font-bold text-center mb-8">
-    Featured Courses
-  </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    {Array(3)
-      .fill(null)
-      .map((_, i) => (
-        <div
-          key={i}
-          className="relative bg-card p-1 rounded-lg"
-        >
-          <div className="border border-gray-300  p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-4">
-              Course Title {i + 1}
-            </h3>
-            <p className="text-muted-foreground mb-4">
-              A brief description of the course content and what students
-              will learn.
-            </p>
-            <Link href="/courses/details">
-              <Button size="sm">Learn More</Button>
-            </Link>
+        {/* Featured Courses Section */}
+        <div className="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Featured Courses
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {courses.map((course) => (
+                        <CourseCard
+                          key={course.id}
+                          title={course.title}
+                          description={course.description}
+                          image={course.image}
+                          price={course.price}
+                        />
+                      ))}
           </div>
-          <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600"></div>
         </div>
-      ))}
-  </div>
-</div>
-
 
         {/* Testimonials Section */}
-        <div className="mt-24 text-center">
+        <div className="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8">What Our Students Say</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {Array(3)
               .fill(null)
               .map((_, i) => (
-                <div key={i} className=" bg-card border border-gray-300  p-6 rounded-lg shadow-sm">
+                <div
+                  key={i}
+                  className="bg-card border border-gray-950 p-6 rounded-lg shadow-sm"
+                >
                   <p className="text-muted-foreground mb-4">
                     &quot;This platform has completely changed how I approach
                     learning. The instructors are amazing!&quot;
@@ -161,7 +156,6 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-
       </div>
     </div>
   );
