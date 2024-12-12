@@ -3,7 +3,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
-const enrolledCourses = [
+interface EnrolledCourse {
+  id: number;
+  title: string;
+  progress: number; // Represents the progress percentage
+  nextLesson: string;
+  thumbnail: string; // URL to the course thumbnail image
+}
+
+const enrolledCourses: EnrolledCourse[] = [
   {
     id: 1,
     title: "Web Development Basics",
