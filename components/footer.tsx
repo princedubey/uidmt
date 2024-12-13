@@ -8,18 +8,16 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <>
-      <footer className="footer bg-gradient-to-r dark:from-gray-900 text-base-content p-10">
+      <footer className="flex footer bg-gradient-to-r max-w-7xl mx-auto dark:from-gray-900 items-center justify-between text-base-content p-10">
         <aside>
-          <div className="relative">
-          <Link href="/">
-          <Image src={logo} alt="Logo" width={100}/>
-        </Link>   
+          <Link href="/" className="hover:scale-150 transition-all">
+          <Image src={logo} alt="Logo" width={100} />
+        </Link>
         <p>
-            ACME Industries Ltd.
+            UIDMT Edtech Ltd.
             <br />
-            Providing reliable tech since 1992
+            Providing reliable tech since 2008
           </p>
-          </div>
         </aside>
         <nav>
           <h6 className="footer-title">Services</h6>
@@ -40,6 +38,7 @@ const Footer = (props: Props) => {
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
+          <a className="link link-hover">Term policy</a>
         </nav>
       </footer>
     </>

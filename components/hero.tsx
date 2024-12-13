@@ -14,10 +14,10 @@ export default function Hero() {
     <main className="h-auto w-screen bg-gradient-to-br dark:from-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold">
-              Bharat&apos;s{" "}
+              India&apos;s{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
                 Biggest & Most Trusted
               </span>
@@ -33,7 +33,7 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="relative">
+          <div className="relative hidden lg:block">
             <div>
               <Image
                 src={heroImage}

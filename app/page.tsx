@@ -20,8 +20,8 @@ export default function Home() {
       <Hero />
       <div className="max-w-7xl mx-auto bg-gradient-to-br dark:from-gray-900">
         {/* Why Choose Us Section */}
-        <div ref={ref} className="mt-24 text-center">
-          <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
+        <div ref={ref} className="mt-12 text-center">
+          <h2 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent uppercase mb-8">What makes us different</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="text-5xl font-bold text-primary">
@@ -71,7 +71,7 @@ export default function Home() {
 
         {/* Features Section */}
         <div className="mt-24 text-center">
-          <h2 className="text-3xl font-bold mb-6">What We Serve</h2>
+        <h2 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent uppercase mb-8">What We Serve</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="flex flex-col items-center p-6  rounded-lg shadow-sm">
               <GraduationCap className="h-12 w-12 mb-4 text-primary" />
@@ -100,9 +100,7 @@ export default function Home() {
 
         {/* Featured Courses Section */}
         <div className="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Featured Courses
-          </h2>
+        <h2 className="text-4xl text-center md:text-6xl font-extrabold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent uppercase mb-8">Featured Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                       {courses.map((course) => (
                         <CourseCard
@@ -118,7 +116,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <div className="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">What Our Students Say</h2>
+        <h2 className="text-4xl text-center md:text-6xl font-extrabold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent uppercase mb-8">What Our Students Say</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {Array(3)
               .fill(null)

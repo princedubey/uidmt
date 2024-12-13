@@ -40,7 +40,9 @@ export const useAuthStore = create<IAuthStore>((set) => ({
         }
     },
 
-    logout: () => {},
-
+    logout: () => {
+        Cookies.remove('access_token')
+        window.location.reload()
+    },
 
 }))

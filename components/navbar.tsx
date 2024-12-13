@@ -16,7 +16,7 @@ export default function Navbar() {
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   return (
-    <nav className="border-b bg-gradient-to-r from-purple-600 to-blue-900">
+    <nav className="border-b bg-gradient-to-r from-purple-700 to-blue-900">
       <div className="flex h-16 items-center px-4 max-w-7xl mx-auto justify-between">
         {/* Logo Section */}
         <Link href="/" className="flex items-center font-semibold">
