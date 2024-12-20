@@ -62,6 +62,44 @@ const config: Config = {
         },
       },
       keyframes: {
+        blob: {
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+          '33%': {
+            transform: 'translate(30px, -50px) scale(1.1)',
+          },
+          '66%': {
+            transform: 'translate(-20px, 20px) scale(0.9)',
+          },
+          '100%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+        },
+        'blob-spin': {
+          '0%': {
+            transform: 'rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg)',
+          },
+        },
+        'blob-morph': {
+          '0%': {
+            borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
+          },
+          '50%': {
+            borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%',
+          },
+          '100%': {
+            borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
+          },
+        },
+    
+        scroll: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         'accordion-down': {
           from: {
             height: '0',
@@ -80,6 +118,10 @@ const config: Config = {
         },
       },
       animation: {
+        scroll: "scroll 20s linear infinite",
+        blob: 'blob 7s infinite',
+        'blob-spin': 'blob-spin 25s infinite linear',
+        'blob-morph': 'blob-morph 15s infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },

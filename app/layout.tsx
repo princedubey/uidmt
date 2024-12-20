@@ -10,7 +10,7 @@ import Footer from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'UIDNT',
+  title: 'UIDMT',
   description: "UIDMT is India's leading Edtech Company that is democratizing education at Scale.",
 };
 
