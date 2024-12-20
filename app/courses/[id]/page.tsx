@@ -1,5 +1,6 @@
 import React from 'react'
 import CourseHeader from '@/components/courses/course-header'
+import CourseDetailCategory from '@/components/courses/course-detail-category'
 
 const CourseDetailPage = () => {
   return (
@@ -7,7 +8,7 @@ const CourseDetailPage = () => {
       <CourseHeader/>
       <div className='flex  justify-between my-8'>
         <div className='w-[65%] min-h-[200px] bg-base-100 rounded-lg p-4 ml-2'>
-           
+           <CourseDetailCategory/>
         </div>
         <div className='w-[30%] bg-slate-800 p-4 rounded-lg mr-2'>
 
