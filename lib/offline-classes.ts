@@ -10,7 +10,7 @@ export const offlineClasses: OfflineClass[] = [
     location: "Mumbai Central",
     price: "₹24,999",
     category: "Digital Marketing",
-    startDate: "2024-02-15",
+    startDate: "15/02/2025",
     batchSize: 20
   },
   {
@@ -22,7 +22,7 @@ export const offlineClasses: OfflineClass[] = [
     location: "Andheri West",
     price: "₹49,999",
     category: "Web Development",
-    startDate: "2024-02-01",
+    startDate: "01/03/2025",
     batchSize: 15
   },
   {
@@ -34,7 +34,7 @@ export const offlineClasses: OfflineClass[] = [
     location: "Powai",
     price: "₹29,999",
     category: "Digital Marketing",
-    startDate: "2024-02-10",
+    startDate: "10/02/2025",
     batchSize: 25
   }
 ];
