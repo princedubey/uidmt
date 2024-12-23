@@ -8,17 +8,27 @@ interface CourseDetailsCategory {
 
 const categories:CourseDetailsCategory[] = [
    {category:"Overview"},
-    {category:"Curriculum"},
-    {category:"Instructor"},
-    {category:"Reviews"}, 
-    {category:"FAQs"}
+   {category:"Curriculum"},
+   {category:"Instructor"}, 
+   {category:"Reviews"}, 
+   {category:"FAQs"}
 ] 
 
-const CourseDetailCategory: React.FC = () => {
+interface CourseDetailCategoryProps {
+  activeTab: string;
+  handleTabChange: (tab: string) => void;
+}
+
+const CourseDetailCategory: React.FC<CourseDetailCategoryProps> = ({ activeTab, handleTabChange }) => {
+
   return (
-    <div>
+    <div className="flex flex-wrap gap-8 pt-4 px-6">
       {categories.map((category: CourseDetailsCategory, index: number) => (
-      <Button key={index}>{category.category}</Button>
+      <Button 
+        onClick={() => handleTabChange(category.category)}
+        variant={activeTab === category.category ? 'default' : 'outline'}
+        className='h-8 text-sm'
+        key={index}>{category.category}</Button>
       ))}
     </div>
   )
