@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div className="space-y-6">
-            <h2 className="text-violet-400 font-bold text-lg">LEGAL</h2>
+            <h2 className="text-violet-400 font-bold text-lg"> LEGAL </h2>
             <ul className="space-y-4">
               {['Terms of use', 'Privacy policy', 'Cookie policy', 'Term policy'].map((item) => (
                 <li key={item}>
